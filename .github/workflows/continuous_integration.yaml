@@ -1,0 +1,22 @@
+name: Continuos Integration FIAP
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        run: actions/checkout@v4
+
+      - name: Setup java SDK
+        run: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name:  Unit Tests
+        run: mvn test
