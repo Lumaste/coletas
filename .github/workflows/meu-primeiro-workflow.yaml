@@ -1,0 +1,17 @@
+on: push
+
+jobs:
+  job1-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprimir mensagem
+        run: echo "Olá, workflow"
+  job2-googbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - sequencia de instrcoes
+        run: |
+          echo "uma nova instrucao"
+          ls
+      - name: Step 2 - imprimir mensagem
+        run: echo "até logo"
