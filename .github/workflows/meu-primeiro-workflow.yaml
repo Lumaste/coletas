@@ -1,3 +1,4 @@
+name: meu workflow
 on: push
 
 jobs:
