@@ -41,7 +41,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'fiap-on-coletas-api-v1-dev'
+          app-name: 'fiap-on-coletas-api-v1-prd'
           slote-name: 'production'
-          publish-profile: ${{secrets.AZURE_PROFILE}}
+          publish-profile: ${{secrets.AZURE_PROFILE_PRD}}
           images: 'index.docker.io/${{secrets.DOCKERHUB_USERNAME}}/coletas-java:${{github.sha}}'
